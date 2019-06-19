@@ -5,26 +5,9 @@ This program will waiting message from MQTT Broker <br/>
 -SIP_Handle.py	<br/>
 This program will control Twinkle SIP Phone program <br/>
 # Setup environment
-Speaker/Microphone<br/>
-/etc/asound.conf <br/>
+Set Speaker/Microphone<br/>
+Set Extension number
 
-pcm.!default { <br/>
-  type asym <br/>
-  capture.pcm "mic" <br/>
-  playback.pcm "speaker" <br/>
-} <br/>
-pcm.mic { <br/>
-  type plug <br/>
-  slave { <br/>
-    pcm "hw:<card number>,<device number>" <br/>
-  } <br/>
-} <br/>
-pcm.speaker { <br/>
-  type plug <br/>
-  slave { <br/>
-    pcm "hw:<card number>,<device number>" <br/>
-  } <br/>
-} <br/>
 
 
 
