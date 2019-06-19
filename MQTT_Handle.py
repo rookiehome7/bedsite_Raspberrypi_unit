@@ -2,11 +2,18 @@ import os
 import time
 import paho.mqtt.client as mqtt
 
+import subprocess
+from subprocess import call
+
 broker_IP = "192.168.1.10"
 broker_Port = 1883 #Default Port
 
-# Bedsite Unit ID  string 
+#Bedsite Unit ID  string 
 patientID = "200"
+
+# ps aux | grep twinkle
+# sudo kill -1 xxxx
+
 
 #How to write to anoter terminal
 #os.system("twinkle --call 101")
@@ -42,4 +49,6 @@ client.on_message = on_message
 client.connect(broker_IP, broker_Port, 60)
 
 client.loop_forever()
+
+
 
